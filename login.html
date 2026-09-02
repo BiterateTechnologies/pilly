@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Biterate Technologies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+    <header class="login-header"><a href="index.html" class="login-logo">Biterate <span>Platform</span></a></header>
+    <main class="login-main">
+        <section class="login-card" aria-labelledby="login-title">
+            <div class="login-intro"><h1 id="login-title">Build with the Biterate<br>Platform</h1><p>Sign up or log in with your Biterate account to build powerful digital experiences.</p></div>
+            <form class="login-form" id="loginForm">
+                <label class="sr-only" for="loginEmail">Email address</label>
+                <input id="loginEmail" type="email" placeholder="Email address" autocomplete="email" required>
+                <button type="submit" class="login-submit">Continue</button>
+                <p id="loginStatus" class="login-status" aria-live="polite"></p>
+            </form>
+            <div class="login-divider"><span>OR</span></div>
+            <div class="provider-list">
+                <button type="button" class="provider-button"><span class="provider-icon google-icon">G</span>Continue with Google</button>
+                <button type="button" class="provider-button"><i class="fa-brands fa-apple provider-icon apple-icon"></i>Continue with Apple</button>
+                <button type="button" class="provider-button"><span class="provider-icon microsoft-icon"><i></i><i></i><i></i><i></i></span>Continue with Microsoft</button>
+                <button type="button" class="provider-button"><i class="fa-solid fa-phone provider-icon phone-icon"></i>Continue with phone</button>
+            </div>
+            <p class="login-legal">By continuing, you agree to our <a href="contact.html">Terms of Use</a> <span>|</span> <a href="contact.html">Privacy Policy</a>.</p>
+            <p class="login-register">New to Biterate? <a href="register.html">Create an account</a></p>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+            const status = document.getElementById("loginStatus");
+            const account = JSON.parse(localStorage.getItem("biterate-account") || "null");
+            if (!account || account.email !== email) {
+                status.textContent = "No account found for this email. Please create an account first.";
+                return;
+            }
+            localStorage.setItem("biterate-session", JSON.stringify({ email: account.email, name: account.name }));
+            status.textContent = "Login successful. Redirecting...";
+            setTimeout(() => { window.location.href = "index.html"; }, 500);
+        });
+        document.querySelectorAll(".provider-button").forEach(function (button) {
+            button.addEventListener("click", function () {
+                document.getElementById("loginStatus").textContent = "Social login needs a provider backend connection.";
+            });
+        });
+    </script>
+</body>
+</html>

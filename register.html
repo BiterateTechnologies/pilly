@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Biterate Technologies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body class="register-page">
+    <header class="register-header"><a href="index.html" class="register-logo">Biterate <span>Platform</span></a></header>
+    <main class="register-main">
+        <section class="register-card" aria-labelledby="register-title">
+            <div class="register-intro"><h1 id="register-title">Create your Biterate<br>account</h1><p>Sign up to build powerful digital experiences with the Biterate Platform.</p></div>
+            <form class="register-form" id="registerForm">
+                <label class="sr-only" for="registerName">Full name</label>
+                <input id="registerName" type="text" placeholder="Full name" autocomplete="name" required>
+                <label class="sr-only" for="registerEmail">Email address</label>
+                <input id="registerEmail" type="email" placeholder="Email address" autocomplete="email" required>
+                <label class="sr-only" for="registerPassword">Password</label>
+                <input id="registerPassword" type="password" placeholder="Password" autocomplete="new-password" minlength="8" required>
+                <label class="sr-only" for="registerConfirm">Confirm password</label>
+                <input id="registerConfirm" type="password" placeholder="Confirm password" autocomplete="new-password" minlength="8" required>
+                <label class="terms-check"><input type="checkbox" required><span>I agree to the Terms of Use and Privacy Policy.</span></label>
+                <button type="submit" class="register-submit">Create account</button>
+                <p id="registerStatus" class="register-status" aria-live="polite"></p>
+            </form>
+            <p class="register-login">Already have an account? <a href="login.html">Log in</a></p>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const password = document.getElementById("registerPassword");
+            const confirm = document.getElementById("registerConfirm");
+            const status = document.getElementById("registerStatus");
+            if (password.value !== confirm.value) {
+                status.textContent = "Passwords do not match.";
+                confirm.focus();
+                return;
+            }
+            localStorage.setItem("biterate-account", JSON.stringify({
+                name: document.getElementById("registerName").value.trim(),
+                email: document.getElementById("registerEmail").value.trim().toLowerCase(),
+                password: password.value
+            }));
+            status.textContent = "Account created. Redirecting to login...";
+            setTimeout(() => { window.location.href = "login.html"; }, 500);
+        });
+    </script>
+</body>
+</html>

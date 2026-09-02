@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Solutions - BiteRate Technologies</title>
+    <meta name="description"
+        content="Discover practical AI solutions from Biterate Technologies, including generative AI, intelligent automation, computer vision, and predictive analytics.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+
+    <!-- Background bubbles -->
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Biterate Technologies Logo">
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html" class="active">AI</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <a href="login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+            <a href="register.html" class="join-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Get Started
+            </a>
+            <button class="search-btn" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                <span class="theme-label">Dark</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- AI Hero -->
+    <section class="portfolio-hero ai-hero">
+        <span>AI Solutions</span>
+        <h1>Build smarter with practical AI.</h1>
+        <p>We turn powerful AI into useful products—automating repetitive work, understanding your data, and creating better experiences for your customers.</p>
+    </section>
+
+    <!-- AI Solution Filters -->
+    <div class="filter-wrap">
+        <button class="filter-btn active-filter" data-filter="all">All AI Solutions</button>
+        <button class="filter-btn" data-filter="generative">Generative AI</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="vision">Computer Vision</button>
+        <button class="filter-btn" data-filter="predictive">Predictive AI</button>
+    </div>
+
+    <!-- AI Solutions Grid -->
+    <section class="portfolio-showcase">
+        <div class="projects-grid">
+            <div class="project-card" data-category="generative">
+                <div class="project-card-header"><span class="project-category-tag">Generative AI</span><i class="fa-solid fa-wand-magic-sparkles project-icon"></i></div>
+                <h3>AI Copilots</h3>
+                <p>Secure assistants that understand your business knowledge and help teams write, search, summarize, and make faster decisions.</p>
+                <div class="project-metrics"><div class="metric-item"><span class="metric-value">24/7</span><span class="metric-label">Availability</span></div><div class="metric-item"><span class="metric-value">3x</span><span class="metric-label">Faster Workflows</span></div></div>
+                <div class="tech-badges"><span class="tech-badge">LLMs</span><span class="tech-badge">RAG</span><span class="tech-badge">Python</span><span class="tech-badge">FastAPI</span></div>
+                <a href="contact.html" class="project-link">Discuss your idea <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card" data-category="automation">
+                <div class="project-card-header"><span class="project-category-tag">Intelligent Automation</span><i class="fa-solid fa-gears project-icon"></i></div>
+                <h3>Smart Process Automation</h3>
+                <p>AI-powered workflows that classify documents, route requests, extract information, and reduce repetitive manual operations.</p>
+                <div class="project-metrics"><div class="metric-item"><span class="metric-value">60%</span><span class="metric-label">Less Manual Work</span></div><div class="metric-item"><span class="metric-value">99%</span><span class="metric-label">Data Accuracy</span></div></div>
+                <div class="tech-badges"><span class="tech-badge">OCR</span><span class="tech-badge">NLP</span><span class="tech-badge">APIs</span><span class="tech-badge">Cloud</span></div>
+                <a href="contact.html" class="project-link">Automate a process <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card" data-category="vision">
+                <div class="project-card-header"><span class="project-category-tag">Computer Vision</span><i class="fa-solid fa-eye project-icon"></i></div>
+                <h3>Visual Intelligence</h3>
+                <p>Real-time image and video analysis for quality checks, object detection, safety monitoring, and smarter customer experiences.</p>
+                <div class="project-metrics"><div class="metric-item"><span class="metric-value">95%</span><span class="metric-label">Detection Accuracy</span></div><div class="metric-item"><span class="metric-value">Real-time</span><span class="metric-label">Monitoring</span></div></div>
+                <div class="tech-badges"><span class="tech-badge">OpenCV</span><span class="tech-badge">PyTorch</span><span class="tech-badge">Vision AI</span><span class="tech-badge">Edge</span></div>
+                <a href="contact.html" class="project-link">Explore vision AI <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card" data-category="predictive">
+                <div class="project-card-header"><span class="project-category-tag">Predictive AI</span><i class="fa-solid fa-chart-line project-icon"></i></div>
+                <h3>Predictive Analytics</h3>
+                <p>Turn operational data into clear forecasts, early warnings, customer insights, and recommendations that support better decisions.</p>
+                <div class="project-metrics"><div class="metric-item"><span class="metric-value">40%</span><span class="metric-label">Earlier Insights</span></div><div class="metric-item"><span class="metric-value">360°</span><span class="metric-label">Data View</span></div></div>
+                <div class="tech-badges"><span class="tech-badge">ML Models</span><span class="tech-badge">Python</span><span class="tech-badge">Dashboards</span><span class="tech-badge">MLOps</span></div>
+                <a href="contact.html" class="project-link">Plan your AI roadmap <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card" data-category="automation">
+                <div class="project-card-header"><span class="project-category-tag">AI Security</span><i class="fa-solid fa-shield-halved project-icon"></i></div>
+                <h3>SentinX Intelligence</h3>
+                <p>Threat detection that learns from complex activity patterns, highlights risks early, and gives security teams actionable context.</p>
+                <div class="project-metrics"><div class="metric-item"><span class="metric-value">95%</span><span class="metric-label">Faster Detection</span></div><div class="metric-item"><span class="metric-value">24/7</span><span class="metric-label">Protection</span></div></div>
+                <div class="tech-badges"><span class="tech-badge">Deep Learning</span><span class="tech-badge">Python</span><span class="tech-badge">Kubernetes</span><span class="tech-badge">FastAPI</span></div>
+                <a href="contact.html" class="project-link">Secure your systems <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card" data-category="generative">
+                <div class="project-card-header"><span class="project-category-tag">AI Strategy</span><i class="fa-solid fa-lightbulb project-icon"></i></div>
+                <h3>AI Readiness & MLOps</h3>
+                <p>From use-case discovery to production deployment, we create a responsible AI roadmap with reliable data, evaluation, and monitoring.</p>
+                <div class="project-metrics"><div class="metric-item"><span class="metric-value">End-to-end</span><span class="metric-label">Delivery</span></div><div class="metric-item"><span class="metric-value">Secure</span><span class="metric-label">By Design</span></div></div>
+                <div class="tech-badges"><span class="tech-badge">MLOps</span><span class="tech-badge">Data</span><span class="tech-badge">Evaluation</span><span class="tech-badge">Governance</span></div>
+                <a href="contact.html" class="project-link">Start with a consultation <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Capability Stats -->
+    <section class="portfolio-stats-section">
+        <div class="stats-grid">
+            <div class="stat-card"><i class="fa-solid fa-brain"></i><div class="stat-number-wrap"><span data-count="6">0</span><span class="stat-plus">+</span></div><div class="stat-label">AI Capabilities</div></div>
+            <div class="stat-card"><i class="fa-solid fa-bolt"></i><div class="stat-number-wrap"><span data-count="60">0</span><span class="stat-plus">%</span></div><div class="stat-label">Workflow Efficiency</div></div>
+            <div class="stat-card"><i class="fa-solid fa-lock"></i><div class="stat-number-wrap"><span data-count="100">0</span><span class="stat-plus">%</span></div><div class="stat-label">Security Focus</div></div>
+            <div class="stat-card"><i class="fa-solid fa-people-group"></i><div class="stat-number-wrap"><span data-count="1">0</span><span class="stat-plus">:1</span></div><div class="stat-label">Human + AI Approach</div></div>
+        </div>
+    </section>
+
+    <!-- AI CTA -->
+    <section class="portfolio-cta-section">
+        <div class="portfolio-cta">
+            <div class="portfolio-cta-content">
+                <h2>Ready to put AI to work?</h2>
+                <p>Tell us what you want to improve. We’ll help you find the right AI use case and build a secure path from idea to impact.</p>
+                <a href="contact.html" class="btn">Talk to our AI team</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h1>Biterate</h1>
+                <h2>Technologies</h2>
+                <p>
+                    Empowering businesses with innovative software solutions,
+                    web development, cloud computing, AI, and digital transformation.
+                </p>
+
+                <div class="social-icons">
+                    <!-- X (Twitter) -->
+                    <a href="https://x.com/yourusername" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/yourusername" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/biterate_technologies" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">AI</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Services</h3>
+                <ul>
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Cloud Solutions</li>
+                    <li>AI & ML</li>
+                    <li>Mobile Apps</li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>📍 Pune, Maharashtra, India</p>
+                <p>📧 info@biterate.com</p>
+                <p>📞 +91 72187-49655</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 BiteRate Technologies. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+    <!-- Inline script for interactive filtering and card animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const projectCards = document.querySelectorAll(".project-card");
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(b => b.classList.remove("active-filter"));
+                    // Add active class to clicked button
+                    btn.classList.add("active-filter");
+
+                    const filterValue = btn.getAttribute("data-filter");
+
+                    projectCards.forEach(card => {
+                        // Reset animations
+                        card.classList.remove("filter-animate");
+
+                        const cardCategory = card.getAttribute("data-category");
+
+                        if (filterValue === "all" || cardCategory === filterValue) {
+                            card.classList.remove("project-hidden");
+                            // Trigger reflow to restart CSS animation
+                            void card.offsetWidth;
+                            card.classList.add("filter-animate");
+                        } else {
+                            card.classList.add("project-hidden");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
